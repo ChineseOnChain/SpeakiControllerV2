@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "斯皮奇手柄V2",
+  "version": "1.3",
+  "description": "Gamepad support for https://speakirpg.overture.io.kr/",
+  "author": "Chairman",
+  "icons": {
+    "48": "uwa.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://speakirpg.overture.io.kr/*"],
+      "js": ["background.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["main-world-controller.js"],
+      "matches": ["*://speakirpg.overture.io.kr/*"]
+    }
+  ]
+}
